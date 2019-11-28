@@ -14,7 +14,7 @@ init(autoreset=True)
 But don't forget to install the module colorame with the command :
 
 ```
-pip install -e .
+pip install colorama
 ```
 
 ### Installing
