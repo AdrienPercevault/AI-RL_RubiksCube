@@ -1,7 +1,0 @@
-README.md
-setup.py
-Rubiks_Cube.egg-info/PKG-INFO
-Rubiks_Cube.egg-info/SOURCES.txt
-Rubiks_Cube.egg-info/dependency_links.txt
-Rubiks_Cube.egg-info/requires.txt
-Rubiks_Cube.egg-info/top_level.txt
