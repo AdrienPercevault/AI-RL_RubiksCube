@@ -14,3 +14,5 @@ while 1:
     time.sleep(0.5)
     action = env.action_space.sample()
     env.step(action)
+    state, reward, done, info = env.step(action)
+    print(state,"#", reward,"#", done,"#", info)
