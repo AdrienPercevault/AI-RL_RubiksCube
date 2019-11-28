@@ -6,6 +6,9 @@ import time
 import gym.spaces
 import gym_Rubiks_Cube
 
+from colorama import init
+init(autoreset=True)
+
 env = gym.make("RubiksCube2x2-v0")
 env.reset()
 
