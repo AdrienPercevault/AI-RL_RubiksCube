@@ -1,0 +1,16 @@
+import gym
+import random
+import numpy as np
+import tensorflow as tf
+import time
+import gym.spaces
+import gym_Rubiks_Cube
+
+env = gym.make("RubiksCube2x2-v0")
+env.reset()
+
+while 1:
+    env.render()
+    time.sleep(0.5)
+    action = env.action_space.sample()
+    env.step(action)
