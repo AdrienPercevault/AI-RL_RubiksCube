@@ -26,7 +26,7 @@ def methodeRandom(env):
     return actions # Solution
 
 def testFunction(function_to_test, env, nb_cube):
-    # ret : liste of (nb_move, time in second)
+    # ret : list of (nb_move, time in second)
     ret = []
     index_cube = 0
     while index_cube != nb_cube:
@@ -48,17 +48,18 @@ env.reset()
 os.system("clear")
 nombre_cube = 4
 
+while 1:
+    env.render()
+    time.sleep(0.5)
+    action = env.action_space.sample()
+    env.step(action)
+    state, reward, done, info = env.step(action)
+    print(state,"#", reward,"#", done,"#", info)
+
+
 print("Méthode ramdom :")
 ret = testFunction(methodeRandom,env, nombre_cube)
 print(f'Results:\nOn {nombre_cube} cubes, average number of moves : {sum([r[0] for r in ret])/nombre_cube}\nAverage time : {str(datetime.timedelta(seconds=sum([r[1] for r in ret])/nombre_cube))}')
-
-#while 1:
-#    env.render()
-#    time.sleep(0.5)
-#    action = env.action_space.sample()
-#    env.step(action)
-#    state, reward, done, info = env.step(action)
-#    print(state,"#", reward,"#", done,"#", info)
 
 # Output example :
 #
@@ -70,3 +71,11 @@ print(f'Results:\nOn {nombre_cube} cubes, average number of moves : {sum([r[0] f
 # Results:
 # On 4 cubes, average number of moves : 3311631.5
 # Average time : 0:03:06.648140
+
+#while 1:
+#    env.render()
+#    time.sleep(0.5)
+#    action = env.action_space.sample()
+#    env.step(action)
+#    state, reward, done, info = env.step(action)
+#    print(state,"#", reward,"#", done,"#", info)
