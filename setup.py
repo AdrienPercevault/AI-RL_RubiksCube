@@ -7,7 +7,8 @@ setup(
     install_requires=[
         'gym', 
         'termcolor',
-        'tensorflow'
+        'tensorflow',
+        'pycuber'
     ],
     url="https://github.com/RobinChiu/gym-Rubiks-Cube",
     packages=find_packages()
