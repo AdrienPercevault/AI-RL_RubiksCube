@@ -329,6 +329,7 @@ class BaseModel():
         
         Don't augment, since this takes up too much space and doesn't cost much in time to
         do it later.
+
         Also keep the inputs shape as (-1, 54, 6) so that other models can use the same
         data.  Similarly, assume the inputs are stored only with the last state.
         """
@@ -554,8 +555,10 @@ class ConvModel2D3D(BaseModel):
         def special_cube_conv(in_tensor, filter_size):
             """
             Takes in a None (samples) x 54 x ? (filters) tensor.
+
             It embedds it into 5 x 5 grid, and does a 3D convolution
             using only the nodes in the orginal embedding.
+
             To speed things up, it actually does the folowing:
             - pads the end with a zero (in the last dimension):
                 None (samples) x 55 x ? (filters) (neighbors)
@@ -715,3 +718,4 @@ class ConvModel2D3D(BaseModel):
             inputs = np.array(input_list)
 
         return inputs, policies, values
+
