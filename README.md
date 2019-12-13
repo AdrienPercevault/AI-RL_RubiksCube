@@ -1,34 +1,14 @@
 # Rubiks-Cube
 
-Rubik's Cube is a student project for the reinforcement learning course during our first year of master's degree.
+### First Project :
 
-### Dependencies
+The first project is a random rubiks cube in 2x2x2.
 
-If you didn't see any color on the console, you can add the two line below at the begining of RB.py file :
+### Second Project :
+ 
+The second project is a test to import a Gym rubiks cube project to the puzzle project of "jasonrute" (https://github.com/jasonrute/puzzle_cube) with a trained neural network.
 
-```
-from colorama import init
-init(autoreset=True)
-```
+### Thrid Project :
 
-But don't forget to install the module colorame with the command :
+The second project is only the puzzle-cube project of "jasonrute" with a colored rubiks cube.
 
-```
-pip install colorama
-```
-
-### Installing
-
-For installing requires dependencies :
-
-```
-pip install -e .
-```
-
-To lunch the program :
-
-```
-python RB.py
-```
-
-### Images / Demo
